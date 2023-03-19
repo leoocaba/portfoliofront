@@ -4,10 +4,10 @@
 >
   ¡Hola! Soy
 </h1>
-<h2
+<h2 *ngFor="let element of usuario | ObjToArray"
   class="__nombre d-flex d-inline fw-bolder text-center text-sm-center text-md-start text-lg-start p-0 mx-1"
 >
-  {{persona.nombre}} {{persona.apellido}}
+  {{ element.nombre }} {{element.apellido}}
 </h2>
 <h4
   class="d-inline-block text-uppercase text-center text-sm-center text-md-start text-lg-start mx-1 mt-4 mt-sm-4 mt-md-3 mt-lg-2"

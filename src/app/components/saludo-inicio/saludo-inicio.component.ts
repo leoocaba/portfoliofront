@@ -9,13 +9,13 @@ import { PersonaService } from 'src/app/services/persona.service';
 })
 export class SaludoInicioComponent implements OnInit {
 
-  persona: Persona = new Persona("", "", "");
+  usuario: Persona = new Persona("", "", "");
 
   constructor(public personaService: PersonaService) { }
 
   ngOnInit(): void {
     // El subscribe escucha los cambios del observable, ejecuta un código y provoca una respuesta
-    this.personaService.getPersona().subscribe(data => { this.persona = data
+    this.personaService.getPersona().subscribe(data => { this.usuario = data
     });
   }
 

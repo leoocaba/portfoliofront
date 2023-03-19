@@ -8,12 +8,12 @@ import { Persona } from '../model/persona.model';
 })
 export class PersonaService {
 
-  URI = 'localhost:8080/personas';
+  URI = 'http://localhost:8080/personas/';
 
   constructor(private http: HttpClient) { }
 
     // El Observable se utiliza para realizar peticiones asíncronas.
     public getPersona(): Observable<Persona> {
-      return this.http.get<Persona>(this.URI+'/traer/perfil')
+      return this.http.get<Persona>(`${this.URI}traer/`);
     }
 }

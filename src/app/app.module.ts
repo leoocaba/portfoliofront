@@ -24,6 +24,7 @@ import { LoginComponent } from './components/login/login.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HardSoftSkillsComponent } from './components/hard-soft-skills/hard-soft-skills.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ObjToArrayPipe } from './objToArray.pipe';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProyectosComponent,
     ProyectoComponent,
     LoginComponent,
-    HardSoftSkillsComponent
+    HardSoftSkillsComponent,
+    ObjToArrayPipe
   ],
   imports: [
     BrowserModule,
