@@ -25,6 +25,10 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HardSoftSkillsComponent } from './components/hard-soft-skills/hard-soft-skills.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ObjToArrayPipe } from './objToArray.pipe';
+import { FormsModule } from '@angular/forms';
+import { BtnLoginLogoutComponent } from './components/btn-login-logout/btn-login-logout.component';
+import { RecargarDirective } from './directives/recargar.directive';
+import { interceptorProvider } from './services/interceptor-service';
 
 
 @NgModule({
@@ -49,15 +53,20 @@ import { ObjToArrayPipe } from './objToArray.pipe';
     ProyectoComponent,
     LoginComponent,
     HardSoftSkillsComponent,
-    ObjToArrayPipe
+    ObjToArrayPipe,
+    BtnLoginLogoutComponent,
+    RecargarDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

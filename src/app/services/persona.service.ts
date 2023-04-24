@@ -12,8 +12,8 @@ export class PersonaService {
 
   constructor(private http: HttpClient) { }
 
-    // El Observable se utiliza para realizar peticiones asíncronas.
-    public getPersona(): Observable<Persona> {
-      return this.http.get<Persona>(`${this.URI}traer/`);
-    }
+  // El Observable se utiliza para realizar peticiones asíncronas.
+  public getPersona(): Observable<Persona> {
+    return this.http.get<Persona>(`${this.URI}traer/`);
+  }
 }

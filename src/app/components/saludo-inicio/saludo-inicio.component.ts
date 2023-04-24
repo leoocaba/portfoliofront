@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/services/persona.service';
 
@@ -15,7 +16,8 @@ export class SaludoInicioComponent implements OnInit {
 
   ngOnInit(): void {
     // El subscribe escucha los cambios del observable, ejecuta un código y provoca una respuesta
-    this.personaService.getPersona().subscribe(data => { this.usuario = data
+    this.personaService.getPersona().subscribe(data => {
+      this.usuario = data
     });
   }
 

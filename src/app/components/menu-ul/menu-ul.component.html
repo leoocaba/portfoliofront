@@ -1,64 +1,63 @@
 <ul
-                class="navbar-nav my-2 my-sm-2 my-md-2 my-lg-0 d-flex flex-column flex-sm-column flex-md-row flex-lg-row justify-content-md-around"
-              >
-                <li class="nav-item active my-2 my-sm-2 my-md-2 my-lg-0 py-0">
-                  <a
-                    routerLinkActive="active" [routerLinkActiveOptions]=" {exact: true} "
-                    routerLink="/"
-                    class="nav-link text-center"
-                    href="#"
-                    aria-current="Página inicio"
-                    >Inicio</a
-                  >
-                </li>
-                <li class="nav-item my-2 my-sm-2 my-md-2 my-lg-0 py-0">
-                  <a
-                    routerLinkActive="active"
-                    routerLink="acerca-de-mi"
-                    class="nav-link text-center"
-                    href="#"
-                    aria-current="Página acerca de mí"
-                    >Acerca</a
-                  >
-                </li>
-                <li class="nav-item my-2 my-sm-2 my-md-2 my-lg-0 py-0">
-                  <a
-                    routerLinkActive="active"
-                    routerLink="experiencia"
-                    class="nav-link text-center"
-                    href="#"
-                    aria-current="Página de experiencias"
-                    >Experiencia</a
-                  >
-                </li>
-                <li class="nav-item my-2 my-sm-2 my-md-2 my-lg-0 py-0">
-                  <a
-                    routerLinkActive="active"
-                    routerLink="educacion"
-                    class="nav-link text-center"
-                    href="#"
-                    aria-current="Página formación académica"
-                    >Educación</a
-                  >
-                </li>
-                <li class="nav-item my-2 my-sm-2 my-md-2 my-lg-0 py-0">
-                  <a
-                    routerLinkActive="active"
-                    routerLink="contacto"
-                    class="nav-link text-center"
-                    href="#"
-                    aria-current="Página de contacto"
-                    >Contacto</a
-                  >
-                </li>
-                <li class="nav-item my-2 my-sm-2 my-md-2 my-lg-0 py-0">
-                  <a
-                    routerLinkActive="active"
-                    routerLink="login"
-                    class="nav-link text-center text-primary"
-                    href="#"
-                    aria-current="Iniciar sesión"
-                    >Login</a
-                  >
-                </li>
-              </ul>
+  class="navbar-nav my-2 my-sm-2 my-md-2 my-lg-0 d-flex flex-column flex-sm-column flex-md-row flex-lg-row justify-content-md-around"
+>
+  <li class="nav-item active my-2 my-sm-2 my-md-2 my-lg-0 py-0">
+    <a
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLink="/"
+      class="nav-link text-center"
+      href="#"
+      aria-current="Página inicio"
+      >Inicio</a
+    >
+  </li>
+  <li class="nav-item my-2 my-sm-2 my-md-2 my-lg-0 py-0">
+    <a
+      routerLinkActive="active"
+      routerLink="acerca-de-mi"
+      class="nav-link text-center"
+      href="#"
+      aria-current="Página acerca de mí"
+      >Acerca</a
+    >
+  </li>
+  <li class="nav-item my-2 my-sm-2 my-md-2 my-lg-0 py-0">
+    <a
+      routerLinkActive="active"
+      routerLink="experiencia"
+      class="nav-link text-center"
+      href="#"
+      aria-current="Página de experiencias"
+      >Experiencia</a
+    >
+  </li>
+  <li class="nav-item my-2 my-sm-2 my-md-2 my-lg-0 py-0">
+    <a
+      routerLinkActive="active"
+      routerLink="educacion"
+      class="nav-link text-center"
+      href="#"
+      aria-current="Página formación académica"
+      >Educación</a
+    >
+  </li>
+  <li class="nav-item my-2 my-sm-2 my-md-2 my-lg-0 py-0">
+    <a
+      routerLinkActive="active"
+      routerLink="contacto"
+      class="nav-link text-center"
+      href="#"
+      aria-current="Página de contacto"
+      >Contacto</a
+    >
+  </li>
+  <li class="nav-item my-2 my-sm-2 my-md-2 my-lg-0 py-0">
+    <app-btn-login-logout
+      *appRecargar="isLogged"
+      color="{{ !isLogged ? 'blue' : 'red' }}"
+      text="{{ !isLogged ? 'Login' : 'Logout' }}"
+      (click)="loginLogout()"
+    ></app-btn-login-logout>
+  </li>
+</ul>

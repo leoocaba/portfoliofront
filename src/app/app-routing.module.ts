@@ -10,14 +10,15 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 const routes: Routes = [
   { path: '', component: InicioComponent },
   { path: 'acerca-de-mi', component: AcercaDeComponent },
-  { path: 'experiencia', component: ExperienciasComponent},
+  { path: 'inicio', component: InicioComponent },
+  { path: 'experiencia', component: ExperienciasComponent },
   { path: 'educacion', component: EducacionComponent },
   { path: 'proyectos', component: ProyectosComponent },
   { path: 'login', component: LoginComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

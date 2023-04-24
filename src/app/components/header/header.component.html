@@ -1,26 +1,26 @@
-    <!-- Sección Header -->
+<!-- Sección Header -->
 
-    <header class="__header">
-        <nav class="container navbar navbar-expand-lg bg-light my-auto py-0">
-          <div class="container-fluid">
-            <app-logo-idev> </app-logo-idev>
-            <button
-              class="navbar-toggler my-auto mx-2"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div
-              class="collapse navbar-collapse justify-content-end"
-              id="navbarSupportedContent"
-            >
-              <app-menu-ul> </app-menu-ul>
-            </div>
-          </div>
-        </nav>
-      </header>
+<header class="__header">
+  <nav class="container navbar navbar-expand-lg bg-light my-auto py-0">
+    <div class="container-fluid">
+      <app-logo-idev> </app-logo-idev>
+      <button
+        class="navbar-toggler my-auto mx-2"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarSupportedContent"
+      >
+        <app-menu-ul *ngIf="currentUrl !== '/login'"> </app-menu-ul>
+      </div>
+    </div>
+  </nav>
+</header>
